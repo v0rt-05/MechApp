@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div style="text-align:center; margin-top: 50px;">
+  <h1>Welcome to MechApp</h1>
+  <p>Your go-to solution for car mechanic services.</p>
+  
+  <div style="margin-top: 30px;">
+    <a href="{{ url_for('login') }}">
+      <button style="padding: 10px 20px; font-size: 16px;">Login</button>
+    </a>
+    <a href="{{ url_for('register') }}">
+      <button style="padding: 10px 20px; font-size: 16px; margin-left: 20px;">Register</button>
+    </a>
+  </div>
+</div>
+{% endblock %}

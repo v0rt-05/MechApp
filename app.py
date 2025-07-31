@@ -44,13 +44,15 @@ def init_db():
         c.executemany('INSERT INTO mechanics (name, expertise, location, contact, availability) VALUES (?, ?, ?, ?, ?)', sample_mechanics)
     conn.commit()
     conn.close()
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/')
 def home():
     if 'user_id' in session:
         return redirect(url_for('dashboard'))
     return redirect(url_for('login'))
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
