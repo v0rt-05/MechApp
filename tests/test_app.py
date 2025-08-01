@@ -1,7 +1,7 @@
 # tests/test_app.py
 
 import pytest
-from app import create_app
+from app.py import create_app
 
 @pytest.fixture
 def client():
